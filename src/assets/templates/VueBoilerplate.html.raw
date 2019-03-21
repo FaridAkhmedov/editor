@@ -1,0 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<noscript>need javascript</noscript>
+<div id="application">
+    <span style="font-size: 32px">{{ message }}</span>
+</div>

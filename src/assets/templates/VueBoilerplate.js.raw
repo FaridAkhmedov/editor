@@ -1,0 +1,11 @@
+new Vue({
+  mounted() {
+
+  },
+  methods: {
+
+  },
+  data() { return {
+      message: 'Привет, Vue!',
+  }; },
+}).$mount('#application');
