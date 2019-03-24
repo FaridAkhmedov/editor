@@ -4,6 +4,7 @@ module.exports = {
   chainWebpack: config => {
     config.module.rule('raw').test(/\.raw$/).use('raw-loader').loader('raw-loader');
   },
+  transpileDependencies: ['vuex-module-decorators'],
   configureWebpack: {
     plugins: [
         new MonacoWebpackPlugin()

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>material css framework</title>
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Sass</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#">JavaScript</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col offset-s3 s6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/1000x1000" alt="placeholder">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

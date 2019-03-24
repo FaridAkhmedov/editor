@@ -1,0 +1,9 @@
+{
+  "page_action": {
+    "default_title": "Editor"
+  },
+  "version": "dev",
+  "license": "mit",
+  "description": "Редактор кода",
+  "default_locale": "ru"
+}

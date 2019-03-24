@@ -2,13 +2,11 @@
 <body><div id="root"></div>
 <script type="text/babel">
 
-
   ReactDOM.render(
       <div style={{ fontSize:'32px' }}>
         Привет, React!
       </div>,
       document.getElementById('root')
   );
-
 
 </script></body></html>
