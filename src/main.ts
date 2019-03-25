@@ -1,14 +1,12 @@
-import Vue from 'vue';
-import App from './App.vue';
+import vue from 'vue';
 import store from './store';
-import './registerServiceWorker';
 // @ts-ignore
-import VTooltip from 'v-tooltip';
+import EditorComponentVue from './components/EditorComponent.vue';
+import './assets/styles/index.styl';
 
-Vue.use(VTooltip);
-Vue.config.productionTip = false;
+vue.config.productionTip = false;
 
-new Vue({
+new vue({
   store,
-  render: (h) => h(App),
-}).$mount('#app');
+  render: (h) => h(EditorComponentVue),
+}).$mount('#application');

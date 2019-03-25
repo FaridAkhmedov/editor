@@ -1,19 +1,30 @@
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   chainWebpack: config => {
-    config.module.rule('raw').test(/\.raw$/).use('raw-loader').loader('raw-loader');
+    config.module.rule("raw").
+        test(/\.txt$/).
+        use("raw-loader").
+        loader("raw-loader")
+        .end();
   },
-  transpileDependencies: ['vuex-module-decorators'],
   configureWebpack: {
-    plugins: [
-        new MonacoWebpackPlugin()
-    ],
     optimization: {
       splitChunks: false,
+    },
+    plugins: [
+      new MonacoWebpackPlugin(),
+    ],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src/"),
+      },
     },
   },
   css: {
     extract: false,
   },
+  publicPath: "",
+  transpileDependencies: ["vuex-module-decorators"],
 };

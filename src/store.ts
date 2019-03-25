@@ -1,28 +1,28 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import vue from 'vue';
+import vuex from 'vuex';
 
-Vue.use(Vuex);
+vue.use(vuex);
 
 import SourceStateVuexModule from './components/SourceStateVuexModule';
 import DocumentStateVuexModule from './components/DocumentStateVuexModule';
 import ToggleableComponentsModule from './components/ToggleableComponentsModule';
 
-export default new Vuex.Store({
-    state: {
-        tick: 0,
+export default new vuex.Store({
+  state: {
+    tick: 0,
+  },
+  modules: {
+    source: SourceStateVuexModule,
+    document: DocumentStateVuexModule,
+    view: ToggleableComponentsModule,
+  },
+  actions: {
+    updateDocumentProxy({commit, rootGetters, state}) {
+      commit('updateDocument', {
+        html: state.source.htmlCode,
+        css: state.source.cssCode,
+        javascript: state.source.javascriptCode,
+      });
     },
-    modules: {
-        source: SourceStateVuexModule,
-        document: DocumentStateVuexModule,
-        view: ToggleableComponentsModule,
-    },
-    actions: {
-        async updateDocumentProxy({commit, rootGetters, state}) {
-            commit('updateDocument', {
-                html: state.source.htmlCode,
-                css: state.source.cssCode,
-                javascript: state.source.javascriptCode,
-            });
-        },
-    },
+  },
 });
