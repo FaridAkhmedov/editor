@@ -1,12 +1,12 @@
-import vue from 'vue';
+import Vue from 'vue';
 import store from './store';
-// @ts-ignore
-import EditorComponentVue from './components/EditorComponent.vue';
+
+import EditorComponent from './components/EditorComponent.vue';
 import './assets/styles/index.styl';
 
-vue.config.productionTip = false;
+Vue.config.productionTip = false;
 
-new vue({
+new Vue({
   store,
-  render: (h) => h(EditorComponentVue),
+  render: (h) => h(EditorComponent),
 }).$mount('#application');

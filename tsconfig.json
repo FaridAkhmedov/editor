@@ -4,6 +4,7 @@
     "strict": true,
     "module": "es2015",
     "jsx": "preserve",
+    "rootDir": "src",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
