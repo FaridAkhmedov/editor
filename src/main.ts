@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import store from './store';
 
+// @ts-ignore
 import EditorComponent from './components/EditorComponent.vue';
 import './assets/styles/index.styl';
 

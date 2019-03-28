@@ -10,6 +10,7 @@ import ToggleableComponentsModule from './components/ToggleableComponentsModule'
 export default new vuex.Store({
   state: {
     tick: 0,
+    languages: ['html', 'css', 'javascript']
   },
   modules: {
     source: SourceStateVuexModule,

@@ -2,8 +2,12 @@
   z-index: 10000;
 }
 
+span.trigger:focus {
+  outline: none;
+}
+
 .tooltip .tooltip-inner {
-  background: #616161 e6
+  background: rgb(91, 91, 91)
   color: #fff;
   border-radius: 4px;
   vertical-align middle
@@ -29,42 +33,83 @@
   margin-right: 5px;
 }
 
-.tooltip.popover .popover-inner {
-  background: #fff;
-  color: black;
-  padding: 12px 18px;
-  font-size 15px;
-  display flex
-  flex-direction column
-  font-weight 400
-  border-radius: 5px;
-  box-shadow: 0 6px 16px -4px #444a;
+.v-drowdown__default {
+  .popover-inner {
+    box-shadow: 0 6px 22px -4px #444c;
+    flex-direction column
+    padding: 12px 18px;
+    border-radius: 5px;
+    background: #fff;
+    font-size 16px;
+    color: black;
+    display flex
+    roboto();
 
-  .popover__group {
-    margin-top: 15px
+    .popover__group {
+      margin-top: 15px
+
+      button:last-child {
+        margin-left: 10px
+      }
+    }
+
+    button {
+      text-transform uppercase
+      transition transform 0.1s
+      letter-spacing 1px
+      border-radius 4px
+      padding: 4px 10px
+      font-weight 600
+      background #666
+      cursor pointer
+      color: white
+      border 0
+
+      &:hover {
+        background #888
+      }
+
+      &:active {
+        transform scale(0.875)
+      }
+    }
   }
+}
 
-  button {
-    text-transform uppercase
-    letter-spacing 1px
-    border-radius 4px
-    padding: 4px 10px
-    font-weight 600
-    background #666
-    cursor pointer
-    color: white
-    border 0
+.v-drowdown__templates {
+  border-left: border
+  border-bottom: border
+  left: -100px !important
+  top: -6px !important
+
+  .popover-inner {
+    flex-direction column
+    padding: 0 0;
+    border-radius: 5px;
+    background: #fff;
+    font-size 16px;
+    color: black;
+    display flex
+    roboto();
+    min-width: 280px
+    overflow hidden
+    .menu__item{
+      height: 32px
+    }
+    .menu__item:not(:last-child){
+      border-bottom: border
+    }
   }
 }
 
 .tooltip[aria-hidden='true'] {
   visibility: hidden;
-  transition opacity 0.4s ease-in
+  transition opacity 250ms cubic-bezier(0.23, 1, 0.32, 1)
   opacity: 0;
 }
 
 .tooltip[aria-hidden='false'] {
   visibility: visible;
-  transition opacity 0.4s ease-out
+  transition opacity 250ms cubic-bezier(0.23, 1, 0.32, 1)
   opacity: 1;
 }
